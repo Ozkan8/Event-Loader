@@ -3,9 +3,9 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: app
+    container_name: event_loader_app
     volumes:
-      - .:/app
+      - ./:/app
     depends_on:
       - redis
     environment:
@@ -15,6 +15,6 @@ services:
 
   redis:
     image: redis:7-alpine
-    container_name: redis
+    container_name: event_loader_redis
     ports:
       - "6379:6379"

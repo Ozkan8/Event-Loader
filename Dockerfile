@@ -17,9 +17,6 @@ WORKDIR /app
 # Copy application files into the container
 COPY . /app
 
-# Install PHP dependencies using Composer
-RUN composer install --no-interaction --prefer-dist
-
 # Expose the port the app runs on (typically 9000 for PHP-FPM)
 EXPOSE 9000
 
