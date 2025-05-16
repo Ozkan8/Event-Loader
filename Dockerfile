@@ -2,7 +2,7 @@ FROM php:8.2-fpm
 
 # Install system dependencies
 RUN apt-get update && apt-get install -y \
-    unzip zip git curl libzip-dev libicu-dev libpq-dev libonig-dev libxml2-dev libcurl4-openssl-dev \
+    unzip zip git curl libzip-dev libicu-dev libpq-dev libonig-dev libxml2-dev libcurl4-openssl-dev dos2unix \
     && docker-php-ext-install intl pdo pdo_mysql zip sockets
 
 # Install redis
